@@ -1,6 +1,11 @@
 import $ from 'jquery';
 import Popper from 'popper.js';
 import 'bootstrap';
+import {
+        hideLoginModal,
+        showLoginModal,
+        getElementPosition
+        } from './modal';
 
 window.$ = $;
 window.jQuery = $;
@@ -9,24 +14,14 @@ window.Popper = Popper;
 const showLogin = document.getElementById('openLogin');
 const hideLogin = document.getElementById('closemodal');
 const modalElement = document.getElementById('modal');
-// const loginContainer = document.getElementById('body');
+const nodesArray = document.querySelectorAll('.view-button');
 
-const showLoginModal = () => {
-	showLogin.addEventListener('click', () => {
-		modalElement.style.display = 'block';
-	});
-};
+showLoginModal(showLogin, modalElement);
+hideLoginModal(hideLogin, modalElement);
+getElementPosition(nodesArray);
 
-const hideLoginModal = () => {
-	window.addEventListener('click', (event) => {
-		if (event.target === hideLogin) {
-			modalElement.style.display = 'none';
-		}
-		if (event.target === modalElement) {
-			modalElement.style.display = 'none';
-		}
-	});
-};
+$('[data-toggle="tooltip"]').tooltip();
 
-showLoginModal();
-hideLoginModal();
+$(function(){
+  $('.edit-button').prop('disabled', true);
+});
