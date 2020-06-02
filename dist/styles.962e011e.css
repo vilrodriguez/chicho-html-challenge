@@ -1,0 +1,130 @@
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  user-select: none;
+}
+
+/* CARDS */
+.article .card:hover {
+  -webkit-box-shadow: 0px 15px 20px -6px #a1a1a1;
+  -moz-box-shadow: 0px 15px 20px -6px #a1a1a1;
+  box-shadow: 0px 15px 20px -6px #a1a1a1;
+}
+
+.article:nth-child(even) .card:hover {
+  background-color: #e2f6ff;
+}
+
+.article:nth-child(odd) .card:hover {
+  background-color: #f8f9fa;
+}
+
+/* LOGIN MODAL */
+.form-container {
+  position: fixed;
+  display: none;
+  float: left;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  z-index: 990;
+  transform: translate(-50%, -50%);
+  border-radius: none;
+}
+.form-container .form-inline {
+  max-width: 500px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3rem auto;
+  padding: 2rem 0;
+  background-color: lightgray;
+}
+.form-container .form-inline div {
+  width: 90%;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  margin: 0.5rem 0;
+  justify-content: space-around;
+  text-align: center;
+}
+.form-container .form-inline div label {
+  float: left;
+  margin: 0.5rem;
+}
+.form-container .form-inline div input {
+  width: 90%;
+}
+.form-container .form-inline div button {
+  margin-right: 10px;
+  margin-bottom: 25px;
+  width: 70%;
+}
+.form-container .form-inline div ::placeholder {
+  text-align: left;
+}
+.form-container .form-inline .remember {
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.form-container .form-inline .remember label {
+  word-wrap: none;
+  width: 100%;
+}
+
+/* Footer */
+.footer {
+  font-size: 1rem;
+  color: black;
+  text-align: left;
+  margin-left: 9rem;
+  margin-bottom: 1rem;
+}
+.footer a {
+  color: black;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 400px) {
+  .form-container {
+    padding: 1rem;
+  }
+  .form-container .form-inline {
+    max-width: 400px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 1rem;
+    flex-direction: row;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  .form-container .form-inline div {
+    justify-content: center;
+  }
+  .form-container .form-inline div button {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+
+  .footer {
+    margin-left: 2rem;
+  }
+}
+
+/*# sourceMappingURL=/styles.962e011e.css.map */
