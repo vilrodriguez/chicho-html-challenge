@@ -11,6 +11,24 @@ body {
   text-anchor: middle;
   user-select: none;
 }
+/* CARDS */
+.article {
+  .card:hover {
+    -webkit-box-shadow: 0px 15px 20px -6px rgba(161,161,161,1);
+    -moz-box-shadow: 0px 15px 20px -6px rgba(161,161,161,1);
+    box-shadow: 0px 15px 20px -6px rgba(161,161,161,1);
+  }
+}
+.article:nth-child(even){
+  .card:hover {
+    background-color: #e2f6ff;
+  }    
+}
+.article:nth-child(odd){
+  .card:hover {
+  background-color:#f8f9fa;
+  }
+}
 
 /* LOGIN MODAL */
 .form-container {
@@ -41,10 +59,10 @@ body {
     
     div{
       width: 90%;
-      // background-color:red;
       flex-direction: row;
       flex-wrap: no-wrap;
       margin: 0.5rem 0;
+      justify-content: space-around;
       text-align: center;
       
       label {
@@ -59,11 +77,20 @@ body {
       button {
         margin-right: 10px;
         margin-bottom: 25px;
-        width: 80%;
+        width: 70%;
       }
 
       ::placeholder {
         text-align: left;
+      }
+    }
+
+    .remember{
+      flex-direction: row;
+      flex-wrap: nowrap;
+      label {
+        word-wrap: none;
+        width: 100%;
       }
     }
   }
@@ -92,10 +119,8 @@ body {
       height: auto;
       display: flex;
       flex-wrap: wrap;
-      // align-items: center;
       border-radius: 1rem;
       flex-direction: row;
-      // justify-content: center;
       margin: 2rem auto;
       padding: 1rem;
 
@@ -107,7 +132,6 @@ body {
           margin-bottom: 1rem;
         }
       }
-
     }
   }
   .footer {
